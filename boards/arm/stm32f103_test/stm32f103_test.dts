@@ -56,4 +56,17 @@
             RC(1, 0) RC(1, 1)
         >;
     };
+
+    &clk_hse {
+        clock-frequency = <DT_FREQ_M(16)>;
+        status = "okay";
+    };
+    
+    &pll {
+        mul = <9>;
+        clocks = <&clk_hse>;
+        status = "okay";
+    };
+    
+
 };
