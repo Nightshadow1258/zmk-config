@@ -4,18 +4,19 @@
 
 if BOARD_STM32F103_TEST
 
-config ZMK_KEYBOARD_NAME
-    default "stm32f103_test"
+config BOARD_STM32_KEYBOARD
+	select SOC_STM32F103X8
 
-if USB
 
-config USB_NRFX
-    default y
+# if USB
 
-config USB_DEVICE_STACK
-    default y
+# config USB_NRFX
+#     default y
 
-endif # USB
+# config USB_DEVICE_STACK
+#     default y
+
+# endif # USB
 
 # config BT_CTLR
 #     default BT

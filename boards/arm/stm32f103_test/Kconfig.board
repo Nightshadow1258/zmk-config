@@ -1,0 +1,9 @@
+# This file was generated from a template. Edit it to match your keyboard.
+# See https://docs.zephyrproject.org/3.5.0/hardware/porting/board_porting.html#write-kconfig-files
+# for more information.
+
+
+
+config split32_test
+    bool "split32_test"
+    select SOC_STM32F103X8

@@ -3,15 +3,22 @@
 # for more information.
 
 identifier: stm32f103_test
-name: stm32f103_test
+name: stm32 Keyboard
 type: mcu
 arch: arm
+ram: 256
+flash: 1024
 toolchain:
   - zephyr
   - gnuarmemb
+  - xtools
 supported:
+  - adc
+  - counter
+  - gpio
+  - i2c
+  - pwm
+  - spi
   - usb_device
-#   - adc
-#   - ble
-#   - pwm
-#   - watchdog
+  - watchdog
+vendor: others
