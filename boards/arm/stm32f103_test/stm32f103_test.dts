@@ -63,11 +63,11 @@
 
 &clk_hse {
     clock-frequency = <DT_FREQ_M(16)>;
-    
     status = "okay";
 };
 
 &pll {
+    xtpre;
     mul = <9>;
     clocks = <&clk_hse>;
     status = "okay";
