@@ -63,6 +63,7 @@
 
 &clk_hse {
     clock-frequency = <DT_FREQ_M(16)>;
+    
     status = "okay";
 };
 
@@ -70,4 +71,13 @@
     mul = <9>;
     clocks = <&clk_hse>;
     status = "okay";
+};
+
+&rcc {
+	clocks = <&pll>;
+	clock-frequency = <DT_FREQ_M(72)>;
+	ahb-prescaler = <1>;
+	apb1-prescaler = <2>;
+	apb2-prescaler = <1>;
+	/* usbpre not set: USB clock = 72 / 1.5: 48MHz */
 };
