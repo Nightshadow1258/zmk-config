@@ -2,17 +2,14 @@
 # See https://docs.zephyrproject.org/3.5.0/hardware/porting/board_porting.html#write-kconfig-files
 # for more information.
 
-if BOARD_STM32F103_TEST
+CONFIG_BOARD_REFERENCE=y
 
+# Enable GPIO
+CONFIG_GPIO=y
 
-if USB
+# Use pinctrl
+CONFIG_PINCTRL=y
 
-config USB_NRFX
-    default y
-
-config USB_DEVICE_STACK
-    default y
-
-endif # USB
-
-endif # BOARD_STM32F103_TEST
+# Enable ZMK outputs
+# CONFIG_ZMK_BLE=y
+CONFIG_ZMK_USB=y

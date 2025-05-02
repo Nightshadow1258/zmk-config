@@ -2,17 +2,7 @@
 # See https://docs.zephyrproject.org/3.5.0/hardware/porting/board_porting.html#write-kconfig-files
 # for more information.
 
-if BOARD_STM32F103_TEST
-
-
-if USB
-
-config USB_NRFX
-    default y
-
-config USB_DEVICE_STACK
-    default y
-
-endif # USB
-
-endif # BOARD_STM32F103_TEST
+config BOARD_REFERENCE
+    bool "reference"
+    depends on SOC_SERIES_YOUR_SOC_SERIES_HERE
+    select SOC_PART_NUMBER_ABCDEFGH
