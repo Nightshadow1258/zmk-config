@@ -17,4 +17,7 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
+board: [ "stm32f103_test" ]
+include:
+  - board: stm32f103_test
 ---
