@@ -19,5 +19,3 @@
 #
 ---
 board: [ "stm32f103_test" ]
-include:
-  - board: stm32f103_test
